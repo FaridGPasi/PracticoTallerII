@@ -4,6 +4,22 @@ namespace Practico4
     {
         public int desde;
         public int hasta;
+
+        static bool EsPrimo(int numero)
+        {
+            for (int i = 2; i < numero; i++)
+            {
+                if ((numero % i) == 0)
+                {
+                    // No es primo :(
+                    return false;
+                }
+            }
+
+            // Es primo :)
+            return true;
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -28,7 +44,8 @@ namespace Practico4
                 MessageBox.Show("Debe ingresar los dos numeros", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else {
+            else
+            {
                 desde = int.Parse(TDesde.Text);
                 hasta = int.Parse(THasta.Text);
                 if (hasta <= desde)
@@ -45,8 +62,6 @@ namespace Practico4
                     }
                 }
             }
-            
-            
         }
 
         private void TDesde_TextChanged(object sender, EventArgs e)
@@ -89,6 +104,102 @@ namespace Practico4
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void BNumerosPares_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(TDesde.Text) || string.IsNullOrEmpty(THasta.Text))
+            {
+                MessageBox.Show("Debe ingresar los dos numeros", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                desde = int.Parse(TDesde.Text);
+                hasta = int.Parse(THasta.Text);
+                if (hasta <= desde)
+                {
+                    MessageBox.Show("El segundo numero debe ser mayor al primero", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+
+                    for (int i = desde; i <= hasta; i++)
+                    {
+
+                        if (i % 2 == 0)
+                        {
+                            LBListaNumeros.Items.Add(i);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void BNumerosImpares_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(TDesde.Text) || string.IsNullOrEmpty(THasta.Text))
+            {
+                MessageBox.Show("Debe ingresar los dos numeros", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                desde = int.Parse(TDesde.Text);
+                hasta = int.Parse(THasta.Text);
+                if (hasta <= desde)
+                {
+                    MessageBox.Show("El segundo numero debe ser mayor al primero", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+
+                    for (int i = desde; i <= hasta; i++)
+                    {
+                        if (i % 2 != 0)
+                        {
+                            LBListaNumeros.Items.Add(i);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void BNumerosPrimos_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(TDesde.Text) || string.IsNullOrEmpty(THasta.Text))
+            {
+                MessageBox.Show("Debe ingresar los dos numeros", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                desde = int.Parse(TDesde.Text);
+                hasta = int.Parse(THasta.Text);
+                if (hasta <= desde)
+                {
+                    MessageBox.Show("El segundo numero debe ser mayor al primero", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+
+                    for (int i = desde; i <= hasta; i++)
+                    {
+                        if (EsPrimo(i))
+                        {
+                            LBListaNumeros.Items.Add(i);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void BLimpiarLista_Click(object sender, EventArgs e)
+        {
+            LBListaNumeros.Items.Clear();
         }
     }
 }

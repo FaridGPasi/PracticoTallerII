@@ -40,6 +40,7 @@
             BNumerosPrimos = new Button();
             LErrorDesde = new Label();
             LErrorHasta = new Label();
+            BLimpiarLista = new Button();
             SuspendLayout();
             // 
             // LDesde
@@ -115,6 +116,7 @@
             BNumerosPares.TabIndex = 7;
             BNumerosPares.Text = "Numeros Pares";
             BNumerosPares.UseVisualStyleBackColor = true;
+            BNumerosPares.Click += BNumerosPares_Click;
             // 
             // BNumerosImpares
             // 
@@ -124,6 +126,7 @@
             BNumerosImpares.TabIndex = 8;
             BNumerosImpares.Text = "Numeros Impares";
             BNumerosImpares.UseVisualStyleBackColor = true;
+            BNumerosImpares.Click += BNumerosImpares_Click;
             // 
             // BNumerosPrimos
             // 
@@ -133,6 +136,7 @@
             BNumerosPrimos.TabIndex = 9;
             BNumerosPrimos.Text = "Numeros Primos";
             BNumerosPrimos.UseVisualStyleBackColor = true;
+            BNumerosPrimos.Click += BNumerosPrimos_Click;
             // 
             // LErrorDesde
             // 
@@ -154,11 +158,22 @@
             LErrorHasta.Size = new Size(0, 13);
             LErrorHasta.TabIndex = 11;
             // 
+            // BLimpiarLista
+            // 
+            BLimpiarLista.Location = new Point(643, 391);
+            BLimpiarLista.Name = "BLimpiarLista";
+            BLimpiarLista.Size = new Size(96, 23);
+            BLimpiarLista.TabIndex = 12;
+            BLimpiarLista.Text = "Limpiar lista";
+            BLimpiarLista.UseVisualStyleBackColor = true;
+            BLimpiarLista.Click += BLimpiarLista_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(BLimpiarLista);
             Controls.Add(LErrorHasta);
             Controls.Add(LErrorDesde);
             Controls.Add(BNumerosPrimos);
@@ -193,5 +208,6 @@
         private Button BNumerosPrimos;
         private Label LErrorDesde;
         private Label LErrorHasta;
+        private Button BLimpiarLista;
     }
 }
