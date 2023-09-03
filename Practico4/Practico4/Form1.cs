@@ -1,3 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
 namespace Practico4
 {
     public partial class Form1 : Form
@@ -19,21 +29,40 @@ namespace Practico4
             // Es primo :)
             return true;
         }
-
         public Form1()
         {
             InitializeComponent();
-
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void TDesde_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void LHasta_Click(object sender, EventArgs e)
+        private void TDesde_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                LErrorDesde.Text = "solo numeros";
+            }
+            else
+            {
+                LErrorDesde.Text = "";
+            }
+        }
 
+        private void THasta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                LErrorHasta.Text = "solo numeros";
+            }
+            else
+            {
+                LErrorHasta.Text = "";
+            }
         }
 
         private void BGenerarFuncion_Click(object sender, EventArgs e)
@@ -62,48 +91,6 @@ namespace Practico4
                     }
                 }
             }
-        }
-
-        private void TDesde_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TDesde_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-                LErrorDesde.Text = "solo numeros";
-            }
-            else
-            {
-                LErrorDesde.Text = "";
-            }
-
-        }
-
-        private void THasta_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-                LErrorHasta.Text = "solo numeros";
-            }
-            else
-            {
-                LErrorHasta.Text = "";
-            }
-        }
-
-        private void LErrorDesde_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void BNumerosPares_Click(object sender, EventArgs e)
@@ -197,9 +184,40 @@ namespace Practico4
             }
         }
 
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void BLimpiarLista_Click(object sender, EventArgs e)
         {
             LBListaNumeros.Items.Clear();
+        }
+
+        private void BGenerarGrafico_Click(object sender, EventArgs e)
+        {
+            if (LBListaNumeros.Items.Count > 0)
+            {
+                for (int i = 0; i <= LBListaNumeros.Items.Count - 1; i++)
+                {
+                    CGrafico.Series["Desde / Hasta"].Points.AddXY(LBListaNumeros.Items[i], LBListaNumeros.Items[i]);
+                   
+                }
+            }
+            else {
+                MessageBox.Show("No hay numeros en la lista", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void CGrafico_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BLimpiarGrafico_Click(object sender, EventArgs e)
+        {
+            CGrafico.Series["Desde / Hasta"].Points.Clear();
         }
     }
 }

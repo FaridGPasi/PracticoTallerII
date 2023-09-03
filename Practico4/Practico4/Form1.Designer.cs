@@ -3,14 +3,14 @@
     partial class Form1
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Variable del diseñador necesaria.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Limpiar los recursos que se estén usando.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,194 +20,243 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Código generado por el Diseñador de Windows Forms
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Método necesario para admitir el Diseñador. No se puede modificar
+        /// el contenido de este método con el editor de código.
         /// </summary>
         private void InitializeComponent()
         {
-            LDesde = new Label();
-            LHasta = new Label();
-            LListaNumeros = new Label();
-            LBListaNumeros = new ListBox();
-            TDesde = new TextBox();
-            THasta = new TextBox();
-            BGenerarFuncion = new Button();
-            BNumerosPares = new Button();
-            BNumerosImpares = new Button();
-            BNumerosPrimos = new Button();
-            LErrorDesde = new Label();
-            LErrorHasta = new Label();
-            BLimpiarLista = new Button();
-            SuspendLayout();
-            // 
-            // LDesde
-            // 
-            LDesde.AutoSize = true;
-            LDesde.Location = new Point(121, 84);
-            LDesde.Name = "LDesde";
-            LDesde.Size = new Size(39, 15);
-            LDesde.TabIndex = 0;
-            LDesde.Text = "Desde";
-            LDesde.Click += label1_Click;
-            // 
-            // LHasta
-            // 
-            LHasta.AutoSize = true;
-            LHasta.Location = new Point(121, 134);
-            LHasta.Name = "LHasta";
-            LHasta.Size = new Size(37, 15);
-            LHasta.TabIndex = 1;
-            LHasta.Text = "Hasta";
-            LHasta.Click += LHasta_Click;
-            // 
-            // LListaNumeros
-            // 
-            LListaNumeros.AutoSize = true;
-            LListaNumeros.Location = new Point(508, 52);
-            LListaNumeros.Name = "LListaNumeros";
-            LListaNumeros.Size = new Size(99, 15);
-            LListaNumeros.TabIndex = 2;
-            LListaNumeros.Text = "Lista de Numeros";
-            // 
-            // LBListaNumeros
-            // 
-            LBListaNumeros.FormattingEnabled = true;
-            LBListaNumeros.ItemHeight = 15;
-            LBListaNumeros.Location = new Point(375, 81);
-            LBListaNumeros.Name = "LBListaNumeros";
-            LBListaNumeros.Size = new Size(364, 304);
-            LBListaNumeros.TabIndex = 3;
-            // 
-            // TDesde
-            // 
-            TDesde.Location = new Point(166, 81);
-            TDesde.Name = "TDesde";
-            TDesde.Size = new Size(82, 23);
-            TDesde.TabIndex = 4;
-            TDesde.TextChanged += TDesde_TextChanged;
-            TDesde.KeyPress += TDesde_KeyPress;
-            // 
-            // THasta
-            // 
-            THasta.Location = new Point(166, 131);
-            THasta.Name = "THasta";
-            THasta.Size = new Size(82, 23);
-            THasta.TabIndex = 5;
-            THasta.KeyPress += THasta_KeyPress;
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.BGenerarFuncion = new System.Windows.Forms.Button();
+            this.BNumerosPares = new System.Windows.Forms.Button();
+            this.BNumerosImpares = new System.Windows.Forms.Button();
+            this.BNumerosPrimos = new System.Windows.Forms.Button();
+            this.BLimpiarLista = new System.Windows.Forms.Button();
+            this.LBListaNumeros = new System.Windows.Forms.ListBox();
+            this.LDesde = new System.Windows.Forms.Label();
+            this.LHasta = new System.Windows.Forms.Label();
+            this.LListaNumeros = new System.Windows.Forms.Label();
+            this.TDesde = new System.Windows.Forms.TextBox();
+            this.THasta = new System.Windows.Forms.TextBox();
+            this.LErrorDesde = new System.Windows.Forms.Label();
+            this.LErrorHasta = new System.Windows.Forms.Label();
+            this.CGrafico = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.BLimpiarGrafico = new System.Windows.Forms.Button();
+            this.BGenerarGrafico = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.CGrafico)).BeginInit();
+            this.SuspendLayout();
             // 
             // BGenerarFuncion
             // 
-            BGenerarFuncion.Location = new Point(121, 177);
-            BGenerarFuncion.Name = "BGenerarFuncion";
-            BGenerarFuncion.Size = new Size(127, 24);
-            BGenerarFuncion.TabIndex = 6;
-            BGenerarFuncion.Text = "Generar Funcion";
-            BGenerarFuncion.UseVisualStyleBackColor = true;
-            BGenerarFuncion.Click += BGenerarFuncion_Click;
+            this.BGenerarFuncion.Location = new System.Drawing.Point(39, 131);
+            this.BGenerarFuncion.Name = "BGenerarFuncion";
+            this.BGenerarFuncion.Size = new System.Drawing.Size(127, 23);
+            this.BGenerarFuncion.TabIndex = 0;
+            this.BGenerarFuncion.Text = "Generar Funcion";
+            this.BGenerarFuncion.UseVisualStyleBackColor = true;
+            this.BGenerarFuncion.Click += new System.EventHandler(this.BGenerarFuncion_Click);
             // 
             // BNumerosPares
             // 
-            BNumerosPares.Location = new Point(121, 218);
-            BNumerosPares.Name = "BNumerosPares";
-            BNumerosPares.Size = new Size(127, 23);
-            BNumerosPares.TabIndex = 7;
-            BNumerosPares.Text = "Numeros Pares";
-            BNumerosPares.UseVisualStyleBackColor = true;
-            BNumerosPares.Click += BNumerosPares_Click;
+            this.BNumerosPares.Location = new System.Drawing.Point(39, 160);
+            this.BNumerosPares.Name = "BNumerosPares";
+            this.BNumerosPares.Size = new System.Drawing.Size(127, 23);
+            this.BNumerosPares.TabIndex = 1;
+            this.BNumerosPares.Text = "Numeros Pares";
+            this.BNumerosPares.UseVisualStyleBackColor = true;
+            this.BNumerosPares.Click += new System.EventHandler(this.BNumerosPares_Click);
             // 
             // BNumerosImpares
             // 
-            BNumerosImpares.Location = new Point(121, 258);
-            BNumerosImpares.Name = "BNumerosImpares";
-            BNumerosImpares.Size = new Size(127, 23);
-            BNumerosImpares.TabIndex = 8;
-            BNumerosImpares.Text = "Numeros Impares";
-            BNumerosImpares.UseVisualStyleBackColor = true;
-            BNumerosImpares.Click += BNumerosImpares_Click;
+            this.BNumerosImpares.Location = new System.Drawing.Point(39, 189);
+            this.BNumerosImpares.Name = "BNumerosImpares";
+            this.BNumerosImpares.Size = new System.Drawing.Size(127, 23);
+            this.BNumerosImpares.TabIndex = 2;
+            this.BNumerosImpares.Text = "Numeros Impares";
+            this.BNumerosImpares.UseVisualStyleBackColor = true;
+            this.BNumerosImpares.Click += new System.EventHandler(this.BNumerosImpares_Click);
             // 
             // BNumerosPrimos
             // 
-            BNumerosPrimos.Location = new Point(121, 298);
-            BNumerosPrimos.Name = "BNumerosPrimos";
-            BNumerosPrimos.Size = new Size(127, 23);
-            BNumerosPrimos.TabIndex = 9;
-            BNumerosPrimos.Text = "Numeros Primos";
-            BNumerosPrimos.UseVisualStyleBackColor = true;
-            BNumerosPrimos.Click += BNumerosPrimos_Click;
-            // 
-            // LErrorDesde
-            // 
-            LErrorDesde.AutoSize = true;
-            LErrorDesde.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            LErrorDesde.ForeColor = Color.Red;
-            LErrorDesde.Location = new Point(166, 107);
-            LErrorDesde.Name = "LErrorDesde";
-            LErrorDesde.Size = new Size(0, 13);
-            LErrorDesde.TabIndex = 10;
-            // 
-            // LErrorHasta
-            // 
-            LErrorHasta.AutoSize = true;
-            LErrorHasta.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            LErrorHasta.ForeColor = Color.Red;
-            LErrorHasta.Location = new Point(166, 157);
-            LErrorHasta.Name = "LErrorHasta";
-            LErrorHasta.Size = new Size(0, 13);
-            LErrorHasta.TabIndex = 11;
+            this.BNumerosPrimos.Location = new System.Drawing.Point(39, 218);
+            this.BNumerosPrimos.Name = "BNumerosPrimos";
+            this.BNumerosPrimos.Size = new System.Drawing.Size(127, 23);
+            this.BNumerosPrimos.TabIndex = 3;
+            this.BNumerosPrimos.Text = "Numeros Primos";
+            this.BNumerosPrimos.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.BNumerosPrimos.UseVisualStyleBackColor = true;
+            this.BNumerosPrimos.Click += new System.EventHandler(this.BNumerosPrimos_Click);
             // 
             // BLimpiarLista
             // 
-            BLimpiarLista.Location = new Point(643, 391);
-            BLimpiarLista.Name = "BLimpiarLista";
-            BLimpiarLista.Size = new Size(96, 23);
-            BLimpiarLista.TabIndex = 12;
-            BLimpiarLista.Text = "Limpiar lista";
-            BLimpiarLista.UseVisualStyleBackColor = true;
-            BLimpiarLista.Click += BLimpiarLista_Click;
+            this.BLimpiarLista.Location = new System.Drawing.Point(283, 373);
+            this.BLimpiarLista.Name = "BLimpiarLista";
+            this.BLimpiarLista.Size = new System.Drawing.Size(75, 23);
+            this.BLimpiarLista.TabIndex = 4;
+            this.BLimpiarLista.Text = "Limpiar Lista";
+            this.BLimpiarLista.UseVisualStyleBackColor = true;
+            this.BLimpiarLista.Click += new System.EventHandler(this.BLimpiarLista_Click);
+            // 
+            // LBListaNumeros
+            // 
+            this.LBListaNumeros.FormattingEnabled = true;
+            this.LBListaNumeros.Location = new System.Drawing.Point(238, 38);
+            this.LBListaNumeros.Name = "LBListaNumeros";
+            this.LBListaNumeros.Size = new System.Drawing.Size(120, 329);
+            this.LBListaNumeros.TabIndex = 5;
+            this.LBListaNumeros.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // LDesde
+            // 
+            this.LDesde.AutoSize = true;
+            this.LDesde.Location = new System.Drawing.Point(36, 41);
+            this.LDesde.Name = "LDesde";
+            this.LDesde.Size = new System.Drawing.Size(38, 13);
+            this.LDesde.TabIndex = 6;
+            this.LDesde.Text = "Desde";
+            // 
+            // LHasta
+            // 
+            this.LHasta.AutoSize = true;
+            this.LHasta.Location = new System.Drawing.Point(36, 79);
+            this.LHasta.Name = "LHasta";
+            this.LHasta.Size = new System.Drawing.Size(35, 13);
+            this.LHasta.TabIndex = 7;
+            this.LHasta.Text = "Hasta";
+            // 
+            // LListaNumeros
+            // 
+            this.LListaNumeros.AutoSize = true;
+            this.LListaNumeros.Location = new System.Drawing.Point(255, 22);
+            this.LListaNumeros.Name = "LListaNumeros";
+            this.LListaNumeros.Size = new System.Drawing.Size(87, 13);
+            this.LListaNumeros.TabIndex = 8;
+            this.LListaNumeros.Text = "Lista de numeros";
+            // 
+            // TDesde
+            // 
+            this.TDesde.Location = new System.Drawing.Point(95, 38);
+            this.TDesde.Name = "TDesde";
+            this.TDesde.Size = new System.Drawing.Size(71, 20);
+            this.TDesde.TabIndex = 9;
+            this.TDesde.TextChanged += new System.EventHandler(this.TDesde_TextChanged);
+            this.TDesde.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TDesde_KeyPress);
+            // 
+            // THasta
+            // 
+            this.THasta.Location = new System.Drawing.Point(95, 76);
+            this.THasta.Name = "THasta";
+            this.THasta.Size = new System.Drawing.Size(71, 20);
+            this.THasta.TabIndex = 10;
+            this.THasta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.THasta_KeyPress);
+            // 
+            // LErrorDesde
+            // 
+            this.LErrorDesde.AutoSize = true;
+            this.LErrorDesde.ForeColor = System.Drawing.Color.Red;
+            this.LErrorDesde.Location = new System.Drawing.Point(95, 60);
+            this.LErrorDesde.Name = "LErrorDesde";
+            this.LErrorDesde.Size = new System.Drawing.Size(0, 13);
+            this.LErrorDesde.TabIndex = 11;
+            // 
+            // LErrorHasta
+            // 
+            this.LErrorHasta.AutoSize = true;
+            this.LErrorHasta.ForeColor = System.Drawing.Color.Red;
+            this.LErrorHasta.Location = new System.Drawing.Point(95, 99);
+            this.LErrorHasta.Name = "LErrorHasta";
+            this.LErrorHasta.Size = new System.Drawing.Size(0, 13);
+            this.LErrorHasta.TabIndex = 12;
+            // 
+            // CGrafico
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.CGrafico.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.CGrafico.Legends.Add(legend2);
+            this.CGrafico.Location = new System.Drawing.Point(401, 38);
+            this.CGrafico.Name = "CGrafico";
+            this.CGrafico.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Desde / Hasta";
+            this.CGrafico.Series.Add(series2);
+            this.CGrafico.Size = new System.Drawing.Size(355, 329);
+            this.CGrafico.TabIndex = 13;
+            this.CGrafico.Text = "chart1";
+            this.CGrafico.Click += new System.EventHandler(this.CGrafico_Click);
+            // 
+            // BLimpiarGrafico
+            // 
+            this.BLimpiarGrafico.Location = new System.Drawing.Point(648, 373);
+            this.BLimpiarGrafico.Name = "BLimpiarGrafico";
+            this.BLimpiarGrafico.Size = new System.Drawing.Size(108, 23);
+            this.BLimpiarGrafico.TabIndex = 14;
+            this.BLimpiarGrafico.Text = "Limpiar Grafico";
+            this.BLimpiarGrafico.UseVisualStyleBackColor = true;
+            this.BLimpiarGrafico.Click += new System.EventHandler(this.BLimpiarGrafico_Click);
+            // 
+            // BGenerarGrafico
+            // 
+            this.BGenerarGrafico.Location = new System.Drawing.Point(364, 174);
+            this.BGenerarGrafico.Name = "BGenerarGrafico";
+            this.BGenerarGrafico.Size = new System.Drawing.Size(31, 52);
+            this.BGenerarGrafico.TabIndex = 15;
+            this.BGenerarGrafico.Text = ">>";
+            this.BGenerarGrafico.UseVisualStyleBackColor = true;
+            this.BGenerarGrafico.Click += new System.EventHandler(this.BGenerarGrafico_Click);
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(BLimpiarLista);
-            Controls.Add(LErrorHasta);
-            Controls.Add(LErrorDesde);
-            Controls.Add(BNumerosPrimos);
-            Controls.Add(BNumerosImpares);
-            Controls.Add(BNumerosPares);
-            Controls.Add(BGenerarFuncion);
-            Controls.Add(THasta);
-            Controls.Add(TDesde);
-            Controls.Add(LBListaNumeros);
-            Controls.Add(LListaNumeros);
-            Controls.Add(LHasta);
-            Controls.Add(LDesde);
-            Name = "Form1";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
-            Load += Form1_Load;
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BGenerarGrafico);
+            this.Controls.Add(this.BLimpiarGrafico);
+            this.Controls.Add(this.CGrafico);
+            this.Controls.Add(this.LErrorHasta);
+            this.Controls.Add(this.LErrorDesde);
+            this.Controls.Add(this.THasta);
+            this.Controls.Add(this.TDesde);
+            this.Controls.Add(this.LListaNumeros);
+            this.Controls.Add(this.LHasta);
+            this.Controls.Add(this.LDesde);
+            this.Controls.Add(this.LBListaNumeros);
+            this.Controls.Add(this.BLimpiarLista);
+            this.Controls.Add(this.BNumerosPrimos);
+            this.Controls.Add(this.BNumerosImpares);
+            this.Controls.Add(this.BNumerosPares);
+            this.Controls.Add(this.BGenerarFuncion);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.CGrafico)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
-        private Label LDesde;
-        private Label LHasta;
-        private Label LListaNumeros;
-        private ListBox LBListaNumeros;
-        private TextBox TDesde;
-        private TextBox THasta;
-        private Button BGenerarFuncion;
-        private Button BNumerosPares;
-        private Button BNumerosImpares;
-        private Button BNumerosPrimos;
-        private Label LErrorDesde;
-        private Label LErrorHasta;
-        private Button BLimpiarLista;
+        private System.Windows.Forms.Button BGenerarFuncion;
+        private System.Windows.Forms.Button BNumerosPares;
+        private System.Windows.Forms.Button BNumerosImpares;
+        private System.Windows.Forms.Button BNumerosPrimos;
+        private System.Windows.Forms.Button BLimpiarLista;
+        private System.Windows.Forms.ListBox LBListaNumeros;
+        private System.Windows.Forms.Label LDesde;
+        private System.Windows.Forms.Label LHasta;
+        private System.Windows.Forms.Label LListaNumeros;
+        private System.Windows.Forms.TextBox TDesde;
+        private System.Windows.Forms.TextBox THasta;
+        private System.Windows.Forms.Label LErrorDesde;
+        private System.Windows.Forms.Label LErrorHasta;
+        private System.Windows.Forms.DataVisualization.Charting.Chart CGrafico;
+        private System.Windows.Forms.Button BLimpiarGrafico;
+        private System.Windows.Forms.Button BGenerarGrafico;
     }
 }
+
